@@ -1,0 +1,126 @@
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.imageLink {
+  display: block;
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.imageLink img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .imageLink img {
+  transform: scale(1.05);
+}
+
+.saleBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e53e3e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.category {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.name {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}
+
+.name:hover {
+  color: #333;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.prices {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.regularPrice {
+  font-size: 0.85rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.addBtn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.addBtn:hover {
+  background: #333;
+}
+
+.addBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
