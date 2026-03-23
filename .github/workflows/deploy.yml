@@ -14,6 +14,10 @@ jobs:
           node-version: '20'
       - run: npm ci
       - run: npm run build
+        env:
+          VITE_WOO_URL: ${{ secrets.VITE_WOO_URL }}
+          VITE_WOO_CONSUMER_KEY: ${{ secrets.VITE_WOO_CONSUMER_KEY }}
+          VITE_WOO_CONSUMER_SECRET: ${{ secrets.VITE_WOO_CONSUMER_SECRET }}
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
